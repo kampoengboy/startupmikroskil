@@ -34,7 +34,7 @@ module.exports = {
 				});
 				var MailOptions = {
 								from:'Tunetify<tunetify@gmail.com>',
-								to : 'mike@kolexia.com',
+								to : 'mike.visualsoft@gmail.com',
 								subject : 'Email Startup Mikroskil',
 								html : 'Hai, Admin. Seseorang menghubungimu dengan informasi sebagai berikut : <br><br>Nama : '+usrObj.name+'<br>Email : '+ usrObj.email +'<br>Pesannya adalah : <br><pre>'+usrObj.message+'</pre>'
 						};
@@ -96,7 +96,7 @@ module.exports = {
 				{
 						var MailOptions = {
 										from:'Tunetify<tunetify@gmail.com>',
-										to : 'mike@kolexia.com',
+										to : 'mike.visualsoft@gmail.com',
 										subject : 'Apply Startup',
 										html : 'Hai, Admin. Seseorang mengirimkan profil startupnya dengan informasi sebagai berikut : <br><br>Nama Startup: '+usrObj.name+'<br>Website URL : '+ usrObj.url+'<br>Email : '+ usrObj.email +'<br>No. Telepon : '+ usrObj.phone+'<br>Deskripsi Startupnya adalah : <br><pre>'+usrObj.description+'</pre>',
 										attachments : [
@@ -110,7 +110,7 @@ module.exports = {
 				else {
 					var MailOptions = {
 									from:'Tunetify<tunetify@gmail.com>',
-									to : 'mike@kolexia.com',
+									to : 'mike.visualsoft@gmail.com',
 									subject : 'Apply Startup',
 									html : 'Hai, Admin. Seseorang mengirimkan profil startupnya dengan informasi sebagai berikut : <br><br>Nama Startup: '+usrObj.name+'<br>Website URL : '+ usrObj.url+'<br>Email : '+ usrObj.email +'<br>No. Telepon : '+ usrObj.phone+'<br>Deskripsi Startupnya adalah : <br><pre>'+usrObj.description+'</pre>',
 					};
