@@ -1,0 +1,35 @@
+<div class="container">
+							<h1 class="page-header">
+									Startup Mikroskil
+									<p class="small">Where All Dreams becomes True</p>
+
+							</h1>
+              <% if(post.length==0) { %>
+                    Belum ada posting yang tersedia...!!!!
+                <% } else { %>
+                <% for(var i=0;i<post.length;i++) { %>
+                    <h2>
+                        <a href="<%=post[i].link%>"><%=post[i].title%></a>
+                    </h2>
+                    <p><span class="glyphicon glyphicon-time"></span> Posted on <%=post[i].date%></p>
+                    <hr>
+                    <a href="<%=post[i].link%>"><img class="img img-responsive" src="<%=post[i].img%>" width="900px" height="300px" /></a>
+                    <hr>
+                    <p><%=post[i].description%></p>
+                    <a class="btn btn-primary" href="<%=post[i].link%>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                    <hr>
+                <% } %>
+                <% } %>
+							<!-- Pager -->
+              <ul class="pager">
+                      <% var prev = page-1%>
+                      <% var next = page+1%>
+                      <li class="previous">
+                          <a href="/?page=<%=prev%>">&larr; Previous</a>
+                      </li>
+                      <li class="next">
+                          <a href="/?page=<%=next%>">Next &rarr;</a>
+                      </li>
+              </ul>
+</div>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png"  href="/favicon.ico">
+    <% if(view.pathFromApp=="views/404" || view.pathFromApp=="views/403" || view.pathFromApp=="views/500") { %>
+    <% } else { %>
+    <title><%=title%></title>
+
+    <!-- for Google -->
+    <meta name="description" content='<%=description%>' />
+    <meta name="keywords" content="startup, mikroskil, medan, indonesia" />
+    <meta name="author" content="Mikroskil" />
+    <meta name="copyright" content="Mikroskil" />
+    <meta name="application-name" content="Startup Mikroskil" />
+    <meta itemprop="image" content="<%=image%>">
+
+    <!-- for Facebook -->
+    <meta property="og:title" content="<%=title%>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%=url%>" />
+    <meta property="og:image" content="<%=image%>" />
+    <meta property="og:description" content="<%=description%>" />
+
+    <!-- for Twitter -->
+    <meta name="twitter:card" content="Startup Mikroskil">
+    <meta name="twitter:site" content="<%=url%>">
+    <meta name="twitter:title" content="Startup Mikroskil">
+    <meta name="twitter:description" content="<%=description%>">
+    <meta name="twitter:image" content="<%=image%>">
+    <% } %>
+    <!--=== Google Fonts ===-->
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <!--STYLES END-->
+
+  </head>
+
+  <body>
+    <header class="navbar navbar-default navbar-fixed-top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="navbar-brand">Startup Mikroskil</a>
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/thestartups">The Startups</a>
+            </li>
+            <li>
+              <a href="/applystartup">Apply Startup</a>
+            </li>
+            <li>
+              <a href="/contact">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-right navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+              <ul class="dropdown-menu" style="padding:12px;">
+                <form class="form-inline" action="/search">
+                  <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" name="q" class="form-control pull-left" placeholder="Search this website">
+                </form>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <%- body %>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+              <p>Copyright &copy Startup Mikroskil 2015.</p>
+          </div>
+          <div class="col-sm-6">
+            <ul class="list-inline pull-right">
+              <li><i class="fa fa-facebook"></i></li>
+              <li><i class="fa fa-twitter"></i></li>
+              <li><i class="fa fa-google-plus"></i></li>
+              <li><i class="fa fa-pinterest"></i></li>
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+    </footer>
+    <!--TEMPLATES-->
+    
+    <!--TEMPLATES END-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <!--SCRIPTS-->
+    <script src="/js/bootstrap.min.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

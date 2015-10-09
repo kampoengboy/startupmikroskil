@@ -1,0 +1,81 @@
+<div class="container">
+  <br>
+  <% if(flash) { %>
+  <% if(flash.err) { %>
+        <div>
+        <br><br>
+        <div class="alert alert-danger" role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          <% Object.keys(flash.err).forEach(function(error) { %>
+                <%= flash.err[error] %>
+          <% }) %>
+        </div>
+        </div>
+  <% } else if (flash.success){ %>
+    <div>
+    <br><br>
+    <div class="alert alert-success" role="alert">
+      <span class="sr-only">Success:</span>
+      <% Object.keys(flash.success).forEach(function(success) { %>
+            <%= flash.success[success] %>
+      <% }) %>
+    </div>
+    </div>
+  <% } %>
+  <% } %>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 class="panel-title">Apply Your Startup</h2>
+    </div>
+    <div class="panel-body">
+          <form  method="post" action="/user/applystartup" class="form-horizontal" role="form">
+          <div class="form-group">
+          <label class="control-label col-lg-4 required">Startup Name &#42;</label>
+          <div class="col-lg-8">
+          <input type="text" id="name" name="name" required="required" class="form-control" placeholder="Your Startup Name">
+          </div>
+          </div>
+          <div class="form-group">
+          <label class="control-label col-lg-4 required">Website Link &#42;</label>
+          <div class="col-lg-8">
+          <input type="text" id="link" name="url" required="required" class="form-control" placeholder="Your Startup Link">
+          </div>
+          </div>
+          <div class="form-group">
+          <label class="control-label col-lg-4 required">Mobile Number &#42;</label>
+          <div class="col-lg-8">
+          <input type="text" id="phone" name="phone" required="required" class="form-control" placeholder="Your Phone Number">
+          </div>
+          </div>
+          <div class="form-group">
+          <label class="control-label col-lg-4 required">Email Address &#42;</label>
+          <div class="col-lg-8">
+          <input type="email" id="email" name="email" required="required" class="form-control" placeholder="Your Email">
+          </div>
+          </div>
+          <div class="form-group">
+          <label class="control-label col-lg-4 required">Description of your Startup &#42;</label>
+          <div class="col-lg-8">
+          <textarea class="form-control" style="resize: none; height:300px"placeholder="Describe to us anything about your startup" name="description"></textarea>
+          </div>
+          </div>
+          <div class="form-group">
+          <label class="control-label col-lg-4 required">Send us the supporting files about your startup (MAX 10 MB) (e.g. Founders' Name & Biography, Company Profile or Pitch Deck in ZIP or RAR) &#42;</label>
+          <div class="col-lg-8">
+          <input type="file" id="avatar" onchange="previewFile()"/>
+          </div>
+          </div>
+          <input type="hidden" name="file_name" id="filename">
+          <input type="hidden" name="file_url" id="fileurl">
+          <div class="form-group">
+          <div class="col-lg-offset-4 col-lg-8">
+          <button type="submit" id="send" class="btn-color btn btn-primary">Apply your Startup</button>
+          </div>
+          </div>
+          </form>
+    </div>
+  </div>
+  </div>
+  <script src="/scripts/8vhe2s.js"></script>
