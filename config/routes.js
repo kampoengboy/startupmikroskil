@@ -34,9 +34,10 @@ module.exports.routes = {
 
   '/': 'HomeController.index',
   '/thestartups' : 'HomeController.thestartups',
-  '/applystartup' : 'HomeController.applystartup',
+  '/apply' : 'HomeController.apply',
   '/contact' : 'HomeController.contact',
-  '/about' : 'HomeController.about'
+  '/about' : 'HomeController.about',
+  '/startup/:name' : 'StartupController.show',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

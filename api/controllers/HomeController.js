@@ -82,7 +82,7 @@ module.exports = {
 				url : 'http://www.startupmikroskil.herokuapp.com/contact'
 			});
 	},
-	applystartup : function(req,res,next){
+	apply : function(req,res,next){
 			return res.view({
 				title : 'Startup Mikroskil | Apply Your Startup',
 				image : '',

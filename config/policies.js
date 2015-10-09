@@ -28,7 +28,7 @@ module.exports.policies = {
 
   // '*': true,
   'home' : {
-    'applystartup' : ['flash'],
+    'apply' : ['flash'],
     'contact' : ['flash']
   }
   /***************************************************************************

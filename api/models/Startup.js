@@ -8,8 +8,10 @@
 module.exports = {
 
   attributes: {
+    name : 'string',
     img : 'string',
     link : 'string',
+    url : 'string',
     title : 'string',
     description : 'string',
     founders : 'array',
