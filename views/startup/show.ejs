@@ -2,22 +2,22 @@
                 <h1><%=startup.title%></h1>
                 <hr>
                 <!-- Preview Image -->
-                <img class="img-responsive" src="<%=startup.img%>">
+                <img class="img-responsive" src="<%=startup.img%>" style="width:300px;height:300px">
                 <hr>
                 <p><%=startup.description%></p>
                 <hr>
                 <h2>The Founders</h2>
                 <% for(var i=0;i<startup.founders.length;i++) { %>
-                  <div class="row">
-                        <br>
-                        <div class="col-md-2 col-sm-3">
-                          <a class="story-img" href="#"><img src="<%=startup.founders[i][1]%>" style="width:100px;height:100px" class="img-circle"></a>
-                        </div>
-                        <div class="col-md-10 col-sm-9">
-                          <h3><%=startup.founders[i][0]%></h3>
-                          <br><br>
-                          <p style="text-align:justify"><%=startup.founders[i][2]%></p>
-                        </div>
+                  <div class="media">
+                    <div class="media-left">
+                      <a href="#">
+                        <img class="media-object img-circle" src="<%=startup.founders[i][1]%>" style="width:100px;height:100px" alt="...">
+                      </a>
+                    </div>
+                    <div class="media-right" style="text-align:justify">
+                      <h4 class="media-heading"><%=startup.founders[i][0]%></h4>
+                      <%=startup.founders[i][2]%>
+                    </div>
                   </div>
                 <% } %>
 </div>
